@@ -16,17 +16,6 @@ class SignupStudent(CreateView):
         user = form.save()
         return redirect('homepage')
 
-class SignupParent(CreateView):
-        model = User
-        form_class = SignupParent
-        template_name = 'signupparent.html'
-
-        def form_valid(self, form):
-            user = form.save()
-            return redirect('homepage')
-
-
-
 
 def homepage(request):
     return render(request , 'homepage.html')
